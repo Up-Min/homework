@@ -10,25 +10,23 @@
 
 <body>
     <div>
-        <span><h1><img src="./naver.png" alt="네이버 메인" width="300"></h1></span>
+        <h1><img src="./naver.png" alt="네이버 메인" width="300"></h1>
     <form autocomplete="off">
         <ul>
-            <label for="ID" > <b>아이디</b>  </label> 
-                <br> <input type="text" id="ID" autofocus placeholder = "@naver.com" class = "longblank" >  
-            <br><label for="PW"> <b>비밀번호</b>  </label> 
-                <br><input type="text" id="PW" >  
-            <br><label for="PW"> <b>비밀번호 재확인</b>  </label> 
-                <br><input type="text" id="PW" >  
+            <label for="user_id" > <b>아이디</b>  </label> 
+                <br> <input type="text" name="user_id" id="user_id" autofocus placeholder = "@naver.com" class = "longblank" required>  
+            <br><label for="pw1"> <b>비밀번호</b>  </label> 
+                <br><input type="password" name="pw1" id="pw1" required >  
+            <br><label for="pw2"> <b>비밀번호 재확인</b>  </label> 
+                <br><input type="password" name="pw2" id="pw2" required>  
         </ul>
         <ul>
-            <label for="name"> <b>이름</b>  </label> 
-                <br><input type="text" id="name"> 
-            <br><label for="PW"> <b>비밀번호</b>  </label> 
-                <br><input type="text" id="PW" > 
+            <label for="user_name"> <b>이름</b>  </label> 
+                <br><input type="text" name="user_name" id="user_name"> 
             <br><label for="birthdate"> <b>생년월일</b> </label> 
                 <br>
-                <input  type="text" name="year" id="birth_year" placeholder="년(4자)" > 
-                <select name="month" id="birth_month">
+                <input type="text" name="birth_year" id="birth_year" placeholder="년(4자)" > 
+                <select name="birth_month" id="birth_month">
                 <option value="mon"> 월 </option>
                 <option value="1"> 1 </option>
                 <option value="2"> 2 </option>
@@ -43,22 +41,22 @@
                 <option value="11"> 11 </option>
                 <option value="12"> 12 </option>
                 </select>
-                <input type="text" name="day" id="birth_dat" placeholder="일">  
+                <input type="text" name="birth_day" id="birth_day" placeholder="일">  
             <label for="email"> 본인확인 이메일 <small>(선택)</small> </label> 
-                <br><input type="text" id="email" placeholder = "선택입력">
+                <br><input type="email" name="email" id="email" placeholder = "선택입력">
         </ul>
         <ul>
-             <li><label for="local"> 휴대전화 </label> <select name="choose" id="gender">
+             <li><label for="tel"> 휴대전화 </label> <select name="tel" id="tel">
                 <option value="kor"> 대한민국 +82 </option>
                 <option value="grc"> 그리스 +30  </option>
                 <option value="njr"> 니제르 +227 </option>
                 <option value="npl"> 네팔 +977 </option>
             </select>  </li>
-            <li><label for="phone"> </label> <input type="text" id="phone" placeholder="전화번호 입력"> <button type="submit"> <img src="./autho.PNG" alt="autho">  </button> </li>
-            <li><label for="autho"> </label> <input type="text" id="autho" placeholder="인증번호 입력하세요" >  </li>
+            <li><label for="phone"> </label> <input type="tel" id="phone" placeholder="전화번호 입력"> <button type="submit"> 인증번호받기 </button> </li>
+            <li><label for="autho"> </label> <input type="text" id="autho" placeholder="인증번호 입력하세요">  </li>
 
         </ul>
-        <button type="submit"> <img src="./gaip.PNG" alt="gaip">  </button> 
+        <button type="submit"> 가입하기 </button> 
     </form>
 </div>
 </body>
