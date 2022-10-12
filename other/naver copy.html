@@ -8,18 +8,23 @@
     <style>
         *{
             background-color: #eee;
+            font-family: Dotum, '돋움' Arial, Helvetica, sans-serif;
         }
         form{ 
             position: relative;
              width: 700px;
              margin: auto;
+             line-height: 20px;
          }
+
         h1{
             text-align: center;
             font-size: 50px;
             font-weight: bold;
             color: #32a852;
             line-height: 0.5em;
+            margin-top: 70px;
+            margin-bottom: 30px;
         }
         fieldset{
             border: 1px ;
@@ -29,62 +34,79 @@
             width: 100%;
             height: 51px;
             background-color: white;
-            border: 1px solid #eee;
-            font: 돋움;
-            padding: 0%;
-            
-        }
-
-        #user_info label{
-            font-size: 14px;
-            font-weight: bold;
-            
-        }
-
-        #user_info button{
-            background-color: #32a852;
-            color: white;
-            font-size: 20px;
-            height: 51px;
-            border: 0px;
+            border: 1px solid gainsboro;
+            margin-bottom: 10px;
         }
 
         #user_info select{
             width: 100%;
             height: 51px;
             background-color: white;
-            border: 1px solid #eee;
+            border: 1px solid gainsboro;
             font-size: 15px;
+            margin-bottom: 10px;
         }
 
-        /* #user_info #user_birthday{
-            width: 30%;
-            height: 2em;
-            background-color: white;
-            border: 0px;
+        #user_info #user_birthday{
+            width: 32%;
             height: 51px;
-        } */
+            background-color: white;
+            border: 1px solid gainsboro;
+            font-size: 15px;
+            padding: 0%;
+        }
 
-        #user_info #div #class{
-            width: 30%;
-            height: 2em;
-            background-color: white;
-            border: 0px;
+        #user_info label {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        #user_info label #user_phone{
+            margin-bottom: 10px;
+        }
+
+        #user_info button{
+            background-color: #32a852;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
             height: 51px;
+            border: 0px;
+            padding: 0%;
+            line-height: 50%;
+            text-align: center;
+            margin: auto;
+        }
+
+        #user_info .verifybutton{
+            width: 27%;
+        }
+
+        #user_info #user_phone {
+            padding: 10%;
+        }
+
+        #user_info #user_phone_middle {
+            width: 70%;
+            background-color: white;
         }
 
         #user_info #user_id {
             text-align: right;
+            background-color: white;
+            color: gray;
+            font-size: 13px;
         }
 
-        #user_info #user_phone_middle {
-            width: 75%;
-            background-color: white;
+        small{
+            color: #eee;
         }
+ 
 
-        #user_info #user_phone_end {
-            text-align: right;
-            background-color: white;
+        #user_info .submitbutton{
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 50px;
         }
 
 
@@ -95,7 +117,10 @@
     <form id="user_info">
         <fieldset> <!-- id, pw, pw2 -->
             <label for="user_id"> 아이디 </label> <br>
-            <input type="text" name="user_id" id="user_id" required placeholder="@naver.com"> <br>
+            <span class="form_user_id">       
+                <input type="text" name="user_id" id="user_id" required placeholder=" @naver.com "> <br>
+            </span>
+
             <label for="user_pw1"> 비밀번호 </label> <br>
             <input type="password" name="user_pw1" id="user_pw1" required> <br> 
             <label for="user_pw2"> 비밀번호 확인</label> <br>
@@ -107,7 +132,7 @@
             <input type="text" name="user_name" id="user_name" required> <br>
             <div class="user_birthday">
                 <label for="user_birthday"> 생년월일 </label> <br>
-                <input type="text" name="user_year" id="user_birthday"> 
+                <input type="text" name="user_year" id="user_birthday" placeholder=" 년(4자) "> 
                 <select name="user_month" id="user_birthday"> 
                     <option value="mon"> 월 </option>
                     <option value="1"> 1 </option>
@@ -123,7 +148,7 @@
                     <option value="11"> 11 </option>
                     <option value="12"> 12 </option>
                 </select> 
-                <input type="text" name="user_day" id="user_birthday"> <br>
+                <input type="text" name="user_day" id="user_birthday" placeholder=" 일 "> <br>
             </div>
 
             <label for="user_id"> 성별 </label> <br>
@@ -135,7 +160,7 @@
 
             </select> <br>
             <label for="user_email"> 본인 확인 이메일 <small>(선택)</small> </label> <br>
-            <input type="email" name="user_email" id="user_email"> <br>
+            <input type="email" name="user_email" id="user_email" placeholder=" 선택입력 " > <br>
 
         </fieldset>
 
@@ -147,12 +172,12 @@
                 <option value="njr"> 니제르 +227 </option>
                 <option value="npl"> 네팔 +977 </option>
             </select> <br>
-            <input type="tel" name="user_phone_middle" id="user_phone_middle"> <button type="submit"> 인증번호 받기 </button> <br>
-            <input type="tel" name="user_phone_end" id="user_phone_end" disabled value="인증번호 입력하세요" > 
+            <input type="tel" name="user_phone_middle" id="user_phone_middle"placeholder=" 전화번호 입력 "> <button type="submit" class="verifybutton"> 인증번호 받기 </button> <br>
+            <input type="tel" name="user_phone_end" id="user_phone_end" disabled value=" 인증번호 입력하세요 " > 
         </fieldset>
 
-        <fieldset>
-            <button type="submit"> 가입하기 </button>
+        <fieldset class="submitbutton">
+             <button type="submit" class="submitbutton"> 가입하기 </button>
         </fieldset>
     </form>   
 
