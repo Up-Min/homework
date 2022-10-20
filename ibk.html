@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBK기업은행</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover{
+            color: white;
+            font-weight: bold;
+        }
+
+        img{border: 0;}
+        ul{list-style: none;}
+        header,body,footer{box-sizing: border-box;}
+/* /////////////////////////// */
+
+        header{
+            width: 1000px;
+            margin: 0 auto;
+            display: flex;
+        }
+        header .logo{
+            background-color: red;
+            height: 150px;
+            width: 250px;
+            text-align: center;
+        }
+        header .sidemenu{
+            flex : 1;
+            flex-direction: column;
+            width: calc(100%-200px);
+            text-align: right;
+        }
+        .sidemenu .smallmenu{
+            background-color:crimson;
+            height: 75px;
+        }
+        .sidemenu .smallmenu a{
+            display: inline-block;
+            padding: 10px;
+            margin-right: 5px;
+        }
+        .sidemenu .bigmenu{
+            background-color:palevioletred;
+            height: 75px;
+        }
+
+        .sidemenu .bigmenu a{
+            display: inline-block;
+            padding: 10px;
+            margin-right: 5px;
+        }
+
+        .wrap{
+            width: 1000px;
+            margin: 0 auto;
+            }
+
+        .slider{
+            width: 100%;
+            height: 300px;
+            background-color: deeppink;
+        }
+
+        .centermenu{
+            width: 100%;
+            height: 100px;
+            background-color:dodgerblue
+        }
+        
+        .upblock{
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex: 1;
+        }
+        .upblock .upblock__content
+        {
+            width: 70%;
+            background-color: darkgreen;
+        }
+        .upblock .upblock__side
+        {
+            width: 30%;
+            flex: 1;
+            flex-direction: column;
+        }
+        .upblock__side .upside__up{
+            height : 50%;
+            background-color: chartreuse;
+        }
+        .upblock__side .upside__down{
+            height: 50%;
+            background-color:aqua;
+        }
+
+        .downblock{
+            width: 100%;
+            height: 200px;
+            background-color: darkcyan;
+            display: flex;
+        }
+
+        .downblock .downblock__content{
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            display: flex;
+        }
+
+        .downblock__content .content__left{
+            width: 20%;
+            height: 100%;
+        }
+
+        .downblock__content .content__right{
+            width: 100%;
+            height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content__left .left__up{
+            height: 50%;
+            background-color: blue;
+        }
+        .content__left .left__down{
+            height: 50%;
+            background-color: blueviolet;
+        }
+        .right_up{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+        }
+        .right_up .right__left{
+            width: 50%;
+            background-color:firebrick;
+            
+        }
+        .right_up .right__right{
+            width: 50%;
+            background-color:cadetblue
+        }
+        .content__right .right__bottom{
+            width: 100%;
+            height: 30%;
+            background-color:dimgray
+        }
+
+    footer{
+        width: 100vw;
+        margin: 0 auto;
+        }
+
+        footer .undermenu{
+            width: 100%;
+            margin-top: 100px;
+            background-color: #eee;
+            height: 150px;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <caption>
+                <h1>logo</h1>
+            </caption>
+        </div>
+        <div class="sidemenu">
+            <div class="smallmenu">
+                <div class="smallmenu__list">
+                    <a href="#">금융사기예방센터</a>
+                    <a href="#">고객센터</a>
+                    <a href="#">마이페이지</a>
+                    <a href="#">정보공개</a>
+                    <a href="#">은행소개</a>
+                    <a href="#">IR</a>
+                    <a href="#">영업점안내</a>
+                    <a href="#">Global</a>
+                </div>
+            </div>
+            <div class="bigmenu">
+                <div class="bigmenu__list">
+                    <a href="#">개인뱅킹</a>
+                    <a href="#">기업뱅킹</a>
+                    <a href="#">금융상품</a>
+                    <a href="#">금융서비스</a>
+                    <a href="#">금융정보</a>
+                    <a href="#">카드</a>
+                    </div>
+                </div>
+        </div>
+
+        </div>
+    </header>
+    <body>
+     <div class="wrap">
+        <section class="slider">
+            <div class="slider__content">
+                <p>slider</p>
+            </div>
+        </section>
+        <section class="centermenu">
+        <div class="centermenu__content">
+            <p>centermenu</p>
+        </div>
+        </section>
+        <section class="upblock">
+        <div class="upblock__content">
+            <p>upblock__content</p>
+        </div>
+        <div class="upblock__side">
+            <div class="upside__up">
+                <p>upside__up</p>
+            </div>
+            <div class="upside__down">
+                <p>upside__down</p>
+            </div>
+        </div>
+        </section>
+        <section class="downblock">
+        <div class="downblock__content">
+                <div class="content__left">
+                    <div class="left__up">
+                        <p>left__up</p>
+                    </div>
+                    <div class="left__down">
+                        <p>left__down</p>
+                    </div>
+                </div>
+            <div class="content__right">
+                <div class="right_up"> 
+                    <div class="right__left">
+                        <p>right__left</p>
+                    </div>
+                    <div class="right__right">
+                        <p>right__right</p>
+                    </div>    
+                </div>
+                <div class="right__bottom">
+                    <p>right__bottom</p>
+                </div>
+            </div>
+        </div>
+        </section>
+     </div>
+     <footer>
+        <div class="undermenu">
+            <p>undermenu</p>
+        </div>
+    </footer> 
+    </body>
+</body>
+
+
+</html>
